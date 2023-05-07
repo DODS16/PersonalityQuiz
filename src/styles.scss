@@ -11,6 +11,7 @@ body {
     margin-left: 25%;
     margin-top: 3%;
     font-size: small;
+    overflow: hidden;
 }
 
 .mainButton {
@@ -20,6 +21,7 @@ body {
     border-radius: 5px ;
     border: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 .mainButton:hover {

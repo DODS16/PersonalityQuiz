@@ -29,7 +29,7 @@ export class QuizComponent implements OnInit {
         this.quizQuestions = questions;
       },
       error: (err: any) => {
-        console.log('Could not load questions');
+        console.error(err)
       }
     });
   }
@@ -66,12 +66,13 @@ export class QuizComponent implements OnInit {
         extrovertCount++;
       }
     }
-    if (introvertCount >= 2) {
-      return 'introvert';
-    } else if (extrovertCount >= 2) {
-      return 'extrovert';
-    } else {
-      return 'neutral';
+    switch (true) {
+      case introvertCount >= 2:
+        return 'introvert';
+      case extrovertCount >= 2:
+        return 'extrovert';
+      default:
+        return 'neutral';
     }
   }
 }
