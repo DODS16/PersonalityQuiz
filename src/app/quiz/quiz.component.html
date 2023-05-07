@@ -1,0 +1,20 @@
+<div style="padding: 1%; padding-bottom: 4%;" class="mainBox" *ngIf="quizQuestions.length > 0">
+  <span style="font-size: medium;" class="timeSpent">Timer: {{timeSpent}}</span>
+  <div class="progressBox">
+    <span class="currentQuestion">Question {{questionNumber+1}} out of {{quizQuestions.length}}</span>
+    <div class="progressBar">
+      <div class="progress" [style.width]="((questionNumber+1)/quizQuestions.length)*100 + '%'">
+      </div>
+    </div>
+  </div>
+  <h2 style="border-bottom: 1px solid lightgray;">{{quizQuestions[questionNumber].title}}</h2>
+  <ul>
+    <li style="margin-bottom: 2%;" class="quizOption" *ngFor="let option of quizQuestions[questionNumber].options; let i = index;">
+      <input type="radio" name="answer" [value]="i" (change)="onSelection(i)">
+      {{option.name}}
+    </li>
+  </ul>
+  <button *ngIf="questionNumber !== quizQuestions.length-3" class="quizButton" (click) = "onPrevious()">previous</button>
+  <button *ngIf="questionNumber !== quizQuestions.length-1" class="quizButton" style="margin-left: 1%;" (click) = "onNext()">Next</button>
+  <button class="mainButton exitButton" routerLink="">Exit</button>
+</div>

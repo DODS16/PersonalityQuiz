@@ -1,0 +1,51 @@
+.quizButton {
+    float: left;
+    border: 1px solid rgb(57, 100, 243);
+    border-radius: 5px;
+    color: rgb(57, 100, 243);
+    background-color: white;
+    padding: 10px;
+}
+
+.quizButton:hover {
+    background-color: rgb(57, 100, 243);
+    color: white;
+}
+
+.exitButton {
+    float: right;
+    margin-right: 1%;
+}
+
+.quizOption {
+    text-align: left;
+    font-size: large;
+    border-bottom: 1px solid lightgray;
+    list-style-type: none;
+}
+
+.progressBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2vh;
+    position: relative;
+    margin-top: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+  
+  .progressBar .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(57, 100, 243);
+    border-radius: 5px;
+  }
+  
+  .currentQuestion {
+    font-weight: bold;
+    margin-bottom: 1%;
+    font-size: large;
+  }

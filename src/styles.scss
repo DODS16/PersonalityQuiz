@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+.mainBox {
+    text-align: center;
+    border: lightgray 1px solid;
+    border-radius: 3px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 3%;
+    font-size: small;
+}
+
+.mainButton {
+    margin-bottom: 2%;
+    background-color: rgb(57, 100, 243);
+    color: white;
+    border-radius: 5px ;
+    border: none;
+    padding: 10px;
+}
+
+.mainButton:hover {
+    background-color: rgb(10, 10, 187);
+}
+
+  
